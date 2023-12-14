@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .Mydiv
+    {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        background-image: url("IMG.avif");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .Login-Heading
+    {
+        margin-top: 70px;
+        align-items: center;
+        color: rgb(8, 12, 16);
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .tracking-in-expand-fwd
+     {
+	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            color: white;
+            font-family: arial black;
+            font-size: 50px;
+    }
+   
+    .tracking-in-expand {
+	       -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+ 
+     @-webkit-keyframes tracking-in-expand {
+         0% {
+         letter-spacing: -0.5em;
+         opacity: 0;
+   }
+    40% {
+        opacity: 0.6;
+   }
+   100% {
+    opacity: 1;
+  }
+}
+   @keyframes tracking-in-expand {
+     0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+    .Login-form
+    {
+        height: 330px;
+        width:35%;
+        background-color: transparent;
+        margin-left: 31%;
+        margin-top: 5%;
+        backdrop-filter: blur(20px);
+        border-radius: 50px;
+        padding: 20px;
+        box-shadow: 0px 0px 20px whitesmoke;
+    }
+    input
+    {
+        width: 80%;
+        height: 50px;
+        margin: 10px;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        color: white;
+        background-color: transparent;
+        border-bottom: 2px solid black;
+        text-align: center;
+    }
+    .loginbtn
+    {
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        height: 70px;
+        color: orangered;
+        font-size: 30px;
+        font-family: ariel black;
+        margin-top: 30px;
+        cursor: pointer;
+        transition-duration: 2s;
+    }
+    .loginbtn:hover
+    {
+        transform: scale(0,9);
+        background-color: transparent;
+        color: white;
+        border: 3px solid white;
+        box-shadow: 0px 0px 10px white;
+    }
+    links a
+    {
+        color: white;
+        text-decoration:none ;
+    }
+</style>
+<body>
+    <div class="Mydiv">
+        <div  class="Login-Heading">
+            <h1 align="center" class="tracking-in-expand">LOGIN</h1>
+        </div>
+        <div class="Login-form">
+            <div align="center">
+                <form autocomplete="off">
+                    <input type="text" name="username" placeholder="username" id="un" required>
+                    <input type="text" name="passoword" placeholder="password" id="pass" required>
+                    <br>
+                    <p class="links"><a href="#"> Forgot Password?</a></p>
+                    <input type="button" name="login" value="LOGIN" class="loginbtn" onclick="dataSubmit()" >
+                    <p class="links"><a href="#"> Create Account</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let un1="Ashish123";
+        let pass2="ashish@123";
+
+        function dataSubmit()
+        {
+            let un2=document.getElementById("un").value;
+            let pass2=document.getElementById("pass").value;
+
+            if((un1==un2)&&(pass1=pass2))
+            {
+                open("HomePage.html")
+            }
+            else
+            {
+                    alert("Incorrect Credentials")
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
